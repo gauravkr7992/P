@@ -1,9 +1,26 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { animate, motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-import { BsArrowUpRight,BsChevronDown } from "react-icons/bs";
+import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
 import me from "../assets/logo.png";
-const Home = () => {
+
+const Home = ({ ratio }) => {
+  const clientCount = useRef(null);
+  const projectCount = useRef(null);
+
+  const animationClientsCount = () => {
+    animate(0, 100, {
+      duration: 1,
+      onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
+    });
+  };
+  const animationProjectsCount = () => {
+    animate(0, 500, {
+      duration: 1,
+      onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
+    });
+  };
+
   const animations = {
     h1: {
       initial: {
@@ -33,52 +50,67 @@ const Home = () => {
           <motion.h1 {...animations.h1}>
             Hi, I Am <br /> Gaurav Kumar
           </motion.h1>
+
           <Typewriter
             options={{
-              strings: ["A Developer", "A Gamer", "A Creator"],
+              strings: ["A Developer", "A Designer", "A Creator"],
               autoStart: true,
               loop: true,
               cursor: "",
               wrapperClassName: "typewriterpara",
             }}
           />
+
           <div>
             <a href="mailto:gauravkr7992@gmail.com">Hire Me</a>
             <a href="#work">
-              Projects
-              <BsArrowUpRight />
+              Projects <BsArrowUpRight />
             </a>
           </div>
+
           <article>
             <p>
-              +<span>100</span>
+              +
+              
+                <motion.span
+                  whileInView={animationClientsCount}
+                  ref={clientCount}
+                ></motion.span>
+            
             </p>
-            <span>Client WorldWide</span>
+            <span>Clients Worldwide</span>
           </article>
 
           <aside>
-          <article>
-            <p>
-              +<span>500</span>
-            </p>
-            <span>Projects Done</span>
-          </article>
-          </aside>
+            <article>
+              <p>
+                +
+               
+                  <motion.span
+                    ref={projectCount}
+                    whileInView={animationProjectsCount}
+                  >
+                    500
+                  </motion.span>
+              
+              </p>
+              <span>Projects Done</span>
+            </article>
 
-          <article data-special>
-            <p>
-              +<span>Contact</span>
-            </p>
-            <span>gauravkr7992@gmail.com</span>
-          </article>
+            <article data-special>
+              <p>Contact</p>
+              <span>gauravkr7992@gmail.com</span>
+            </article>
+          </aside>
         </div>
       </section>
       <section>
-          <img src={me} alt="Gaurav"/>
+        <img src={me} alt="Gaurav" />
       </section>
-      <BsChevronDown/>
+      <BsChevronDown />
     </div>
   );
 };
+
 
 export default Home;
