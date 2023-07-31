@@ -9,6 +9,7 @@
 @import "testimonial";
 @import "contact";
 @import "footer";
+@import "mediaquery";
 *{
     margin: 0%;
     padding: 0%;
@@ -25,6 +26,7 @@ body{
     overflow-x: hidden;
 }
 .disableBtn{
-    background-color: rgb(237, 237, 237);
-    cursor: not-allowed;
+    color:$color6 !important;
+    background-color: rgb(237, 237, 237) !important;
+    cursor: not-allowed !important;
 }
