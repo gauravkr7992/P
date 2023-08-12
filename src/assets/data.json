@@ -5,21 +5,21 @@
       "title": "E-ToLet",
       "description": "This is the sample description about the project details. The more details the more details and evenually more details because I don't have anything to write",
       "url": "https://frabjous-semolina-55a4b0.netlify.app/",
-      "imgSrc": "./tolet.jpeg"
+      "imgSrc": "https://t4.ftcdn.net/jpg/00/68/15/89/360_F_68158988_eIEXeN6QwC2NFK2Tp1FZhEqVymwKyJIT.jpg"
     },
     {
       "date": "17/07/2022",
       "title": "CRUD Operation",
       "description": "This is the sample description about the project details. The more details the more details and evenually more details because I don't have anything to write",
       "url": "https://kaleidoscopic-bonbon-d2a48e.netlify.app/",
-      "imgSrc": "./todo.jpeg"
+      "imgSrc": "https://clickup.com/blog/wp-content/uploads/2019/01/to-do-list-apps.png"
     },
     {
       "date": "31/08/2023",
       "title": "PORTFOLIO",
       "description": "This is the sample description about the project details. The more details the more details and evenually more details because I don't have anything to write",
       "url": "/",
-      "imgSrc": "https://cdn.pixabay.com/photo/2020/03/19/21/25/cactus-4948833_960_720.jpg"
+      "imgSrc": "https://cache.careers360.mobi/media/article_images/2022/4/20/How-to-make-portfolio-for-design-admission.webp"
     }
   ]
 }
